@@ -1,9 +1,11 @@
 #include <stdio.h>;
+#include <locale.h>;
 
+// изображение дома
 void house() {
 	puts("    ______   ");
 	puts("   /      \\   ");
-	puts("  /        \\  ");
+	puts("  /        \\      <------ДОМ");
 	puts(" /          \\  ");
 	puts("/____________\\ ");
 	puts("|       ___  |");
@@ -13,10 +15,11 @@ void house() {
 	puts("|_|__|_______|");
 }
 
+// изображение корабля
 void ship() {
 	puts("            \\__/");
 	puts("            /||\\");
-	puts("           / || \\");
+	puts("           / || \\        <------КОРАБЛЬ");
 	puts("          /  ||  \\");
 	puts("         /   ||   \\");
 	puts("        /____||____\\");
@@ -27,6 +30,8 @@ void ship() {
 }
 
 void main() {
+	setlocale(LC_CTYPE, "RUS"); // латиница
+
 	house();
 	ship();
 }
